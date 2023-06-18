@@ -14,7 +14,6 @@ public class TaskController {
     }
 
     @GetMapping
-
     public TaskDto getTask(Long taskId) {
         return new TaskDto(1L, "test title", "test_content");
     }
