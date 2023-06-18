@@ -21,11 +21,11 @@ public class TaskController {
     public void deleteTask(Long taskId) {
 
     }
-    @PostMapping
+    @PutMapping
     public TaskDto updateTask(TaskDto taskDto) {
         return new TaskDto(1L, "Edited test title", "Test content");
     }
-    @PutMapping
+    @PostMapping
     public void createTask(TaskDto taskDto) {
 
     }
