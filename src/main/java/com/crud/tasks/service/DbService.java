@@ -13,7 +13,6 @@ import java.util.Optional;
 public class DbService {
 
     private final TaskRepository repository;
-    private final Task task;
 
     public List<Task> getAllTasks() {
         return repository.findAll();
