@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -25,8 +24,8 @@ public class DbService {
         return repository.findById(taskId).orElseThrow(TaskNotFoundException::new);
     }
 
-    public Task saveTask(final Task task){
-        return repository.save(task);
+    public void saveTask(final Task task){
+        repository.save(task);
     }
 
     public void deleteTask(final Long id) {
